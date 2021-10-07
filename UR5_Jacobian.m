@@ -1,13 +1,13 @@
 % Declare the symbolic variables
-syms th1 th2 th3 th4 th5 th6 d_th1 d_th2 d_th3 d_th4 d_th5 d_th6 d1 d2 a3 a4 d5 d6 d7
+syms th1 th2 th3 th4 th5 th6 d_th1 d_th2 d_th3 d_th4 d_th5 d_th6 d1 a3 a4 d4 d5 d6
 
 % Alternatively, can define the values to check a solution
-% d2 = 0.089159;
+% d1 = 0.089159;
 % a3 = -0.425;
 % a4 = -0.39225;
-% d5 = 0.10915;
-% d6 = 0.09465;
-% d7 = 0.0823;
+% d4 = 0.10915;
+% d5 = 0.09465;
+% d6 = 0.0823;
 
 % th1 = 0;
 % th2 = 0;
@@ -18,12 +18,11 @@ syms th1 th2 th3 th4 th5 th6 d_th1 d_th2 d_th3 d_th4 d_th5 d_th6 d1 d2 a3 a4 d5 
 
 % dh table describing transformation matrices from 0 to ef.
 dh = [0 0 d1 th1;
-      0 pi/2 d2 th2;
+      0 pi/2 0 th2;
       a3 0 0 th3;
-      a4 0 0 th4;
+      a4 0 d4 th4;
       0 pi/2 d5 th5
-      0 -pi/2 d6 th6;
-      0 0 d7 0];
+      0 -pi/2 d6 th6];
 
 % direct kinematics returns the incremental and total transformation
 % matrices.
